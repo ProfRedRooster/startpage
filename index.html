@@ -19,6 +19,7 @@
     }
 
     .wrapper {
+     padding-top: 20px;
       display: flex;
       width: 100vw;
       height: 100vh;
@@ -146,15 +147,22 @@
       <div class="menu-block">
         <ul>Developer
           <li><a href="https://github.com/">Github</a></li>
-          <li><a href="https://codepen.io/">Codepen</a></li>         
+          <li><a href="https://codepen.io/">Codepen</a></li>  
+          <li><a href="https://www.w3schools.com/js/tryit.asp">W3schools</a></li>
+          
     </ul>
       </div>
       <div class="menu-block">
         <ul>Divers
-          <li><a href="https://gmail.com/">Gmail</a></li>
           <li><a href="https://chat.openai.com">Chat GPT</a></li>
-          <li><a href="https://youtube.com">Youtube</a></li>
           <li><a href="https://rohandg.nl">Rohandg</a></li>
+
+        </ul>
+      </div>
+      <div class="menu-block">
+        <ul>Google
+          <li><a href="https://gmail.com/">Gmail</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
 
         </ul>
       </div>
@@ -169,11 +177,16 @@
   $(this).children("ul").children("li").toggle(400)
 })
 
+
 updateTime()
 updateDate()
 updateText()
 updateColors()
 setInterval(updateTime, 1000)
+
+var input = document.getElementById('search');
+input.focus();
+input.select();
 
 let button = document.querySelector(".header-input > button")
 
@@ -198,7 +211,7 @@ function updateTime() {
 }
 
 function updateDate() {
-  let days = ["Mn", "Tu", "Wd", "Th", "Fr", "St", "Sn"]
+  let days = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"]
   
   
   let now = new Date()
@@ -230,9 +243,9 @@ function updateText() {
   
   let greetings = document.querySelector(".header-greeting > h1")
   
-  if(h > 5 && h < 12) greetings.innerHTML = "Good morning!"
-  else if(h > 12 && h < 18) greetings.innerHTML = "Good afternoon!"
-  else greetings.innerHTML = "Good evening!"
+  if(h > 5 && h < 12) greetings.innerHTML = "Goedemorgen Rohan!"
+  else if(h > 12 && h < 18) greetings.innerHTML = "Goedemiddag Rohan!"
+  else greetings.innerHTML = "Goedeavond Rohan!"
 }
 
 function updateColors() {
