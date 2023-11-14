@@ -1,143 +1,231 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Title</title>
+  <style>
+    @import 'https://fonts.googleapis.com/css?family=Inconsolata';
 
-<div class="wrapper">
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .wrapper {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      justify-content: baseline;
+      flex-direction: column;
+      padding-top: 25vh;
+    }
+
+    .header {
+      font-family: "Inconsolata", "Roboto Mono", "Consolas", "Courier New", monospace;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header h1 {
+      margin: 0;
+    }
+
+    .header-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .header-input {
+      width: 100%;
+      display: flex;
+    }
+
+    .header-input #search {
+      box-sizing: border-box;
+      height: 32px;
+      padding: 0 10px;
+      flex: 9;
+      border: 0;
+      background: #eee;
+    }
+
+    .header-input button {
+      color: #fff;
+      background: #000;
+      height: 32px;
+      padding: 0;
+      border: 0;
+      flex: 1;
+    }
+
+    .links {
+      font-family: "Inconsolata", "Roboto Mono", "Consolas", "Courier New", monospace;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 50%;
+    }
+
+    .links .menu-block {
+      display: flex;
+      cursor: pointer;
+      width: 50%;
+    }
+
+    .links ul {
+      list-style: none;
+    }
+
+    .links ul li {
+      display: none;
+    }
+
+    .links ul li a {
+      color: #555;
+    }
+
+    div.night {
+      color: #aaa;
+      background: #111;
+    }
+
+    input.night {
+      color: #aaa;
+      background-color: #333 !important;
+    }
+
+    button.night {
+      background-color: #aaa;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
     <div class="header">
-        <div class="header-greeting">
-            <h1>Greetings!</h1>
+      <div class="header-greeting">
+        <h1>Greetings!</h1>
+      </div>
+      <div class="header-wrapper">
+        <div class="header-time">
+          <h3 id="current-time">00 : 00 : 00</h3>
         </div>
-        <div class="header-wrapper">
-            <div class="header-time">
-                <h3 id="current-time">00 : 00 : 00</h3>
-            </div>
-            <div class="header-date">
-                <h3 id="date">01 / 01 / 16</h3>
-            </div>
+        <div class="header-date">
+          <h3 id="date">01 / 01 / 16</h3>
         </div>
-        <div class="header-input"><input type="text" placeholder="Search..." id="search" /><button href="#">></button></div>
+      </div>
+      <div class="header-input">
+        <input type="text" placeholder="Search..." id="search" />
+        <button href="#">></button>
+      </div>
     </div>
     <div class="links">
-        <div class="menu-block">
-            <ul>reddit
-                <li><a href="http://reddit.com/r/Netrunner">/r/netrunner</a></li>
-                <li><a href="http://reddit.com/r/unixporn">/r/unixporn</a></li>
-                <li><a href="http://reddit.com/r/startpages">/r/startpages</a></li>
-                <li><a href="http://reddit.com/r/bindingofisaac">/r/bindingofisaac</a></li>
-                <li><a href="http://reddit.com/r/linuxmasterrace">/r/linuxmasterrace</a></li>
-                <li><a href="http://reddit.com/r/linux_gaming">/r/linux_gaming</a></li>
-                <li><a href="http://reddit.com/r/fl_studio">/r/fl_studio</a></li>
-            </ul>
-        </div>
-        <div class="menu-block">
-            <ul>social media
-                <li><a href="http://fb.com">facebook</a></li>
-                <li><a href="https://twitter.com">twitter</a></li>
-                <li><a href="https://youtube.com">youtube</a></li>
-                <li><a href="https://soundcloud.com">soundcloud</a></li>
-            </ul>
-        </div>
-        <div class="menu-block">
-            <ul>forums
-                <li><a href="http://discoverygc.com/forums/index.php">discoverygc.com</a></li>
-                <li><a href="http://duelmasters.com.pl">duelmasters.com.pl</a></li>
-                <li><a href="http://letsplej.pl">letsplej.pl</a></li>
-            </ul>
-        </div>
-        <div class="menu-block">
-            <ul>4chan
-                <li><a href="http://4chan.org/pol">/pol</a></li>
-                <li><a href="http://4chan.org/b">/b</a></li>
-            </ul>
-        </div>
+      <div class="menu-block">
+        <ul>School
+          <li><a href="https://wlg.magister.net/">Magister</a></li>
+          <li><a href="https://studygo.com/nl/">StudyGo</a></li>
+          <li><a href="https://quizlet.com/">Quizlet</a></li>
+          <li><a href="https://wlg.nl">WLG</a></li>
+
+        </ul>
+      </div>
+      <!-- Add other menu-blocks as needed -->
     </div>
-</div>
-  <style>
-  @import 'https://fonts.googleapis.com/css?family=Inconsolata';
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-.wrapper {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: baseline;
-  flex-direction: column;
-  padding-top: 25vh;
-}
-.header {
-  font-family: "Inconsolata", "Roboto Mono", "Consolas", "Courier New", monospace;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-.header h1 {
-  margin: 0;
-}
-.header-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-.header-input {
-  width: 100%;
-  display: flex;
-}
-.header-input #search {
-  box-sizing: border-box;
-  height: 32px;
-  padding: 0 10px;
-  flex: 9;
-  border: 0;
-  background: #eee;
-}
-.header-input button {
-  color: #fff;
-  background: #000;
-  height: 32px;
-  padding: 0;
-  border: 0;
-  flex: 1;
-}
-.links {
-  font-family: "Inconsolata", "Roboto Mono", "Consolas", "Courier New", monospace;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 50%;
-}
-.links .menu-block {
-  display: flex;
-  cursor: pointer;
-  width: 50%;
-}
-.links ul {
-  list-style: none;
-}
-.links ul li {
-  display: none;
-}
-.links ul li a {
-  color: #555;
-}
-div.night {
-  color: #aaa;
-  background: #111;
-}
-input.night {
-  color: #aaa;
-  background-color: #333 !important;
-}
-button.night {
-  background-color: #aaa;
-  color: #333;
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+
+    $(".menu-block").click(function() {
+  $(this).children("ul").children("li").toggle(400)
+})
+
+updateTime()
+updateDate()
+updateText()
+updateColors()
+setInterval(updateTime, 1000)
+
+let button = document.querySelector(".header-input > button")
+
+button.addEventListener("click", search)
+document.addEventListener("keydown", function(e) {
+  if(e.keyCode === 13) search()
+})
+
+function updateTime() {
+  let now = new Date()
+  let s = now.getSeconds().toString()
+  let m = now.getMinutes().toString()
+  let h = now.getHours().toString()
+  
+  if(s.length === 1) s = "0"+s
+  if(m.length === 1) m = "0"+m
+  if(h.length === 1) h = "0"+h
+  
+  let output = h + " : " + m + " : " + s
+  
+  document.getElementById("current-time").innerHTML = output
 }
 
-  </style>
+function updateDate() {
+  let days = ["Mn", "Tu", "Wd", "Th", "Fr", "St", "Sn"]
+  
+  
+  let now = new Date()
+  let d = now.getDate()
+  let m = now.getMonth()+1
+  let y = now.getFullYear()
+  let w = now.getDay()
+  
+  if(d.length === 1) d = "0"+d
+  if(m.length === 1) m = "0"+m
+  if(y.length === 1) y = "0"+y
+  
+  let output = days[w-1] + " " + d + " / " + m + " / " + y
+  
+  document.getElementById("date").innerHTML = output
+}
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<html>
+function search() {
+  let str = document.getElementById("search").value
+  
+  let output = "https://www.google.pl/#safe=off&q="+str
+  
+  location.href = output
+}
+
+function updateText() {
+  let now = new Date()
+  let h = now.getHours()
+  
+  let greetings = document.querySelector(".header-greeting > h1")
+  
+  if(h > 5 && h < 12) greetings.innerHTML = "Good morning!"
+  else if(h > 12 && h < 18) greetings.innerHTML = "Good afternoon!"
+  else greetings.innerHTML = "Good evening!"
+}
+
+function updateColors() {
+  let now = new Date()
+  let h = now.getHours()
+  
+  if(h>18 || h<5) {
+    $(".wrapper").addClass("night")
+    $("#search").addClass("night")
+    $("button").addClass("night")
+  }
+}
+
+  </script>
+</body>
+</html>
