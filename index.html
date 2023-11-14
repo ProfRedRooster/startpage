@@ -1,1 +1,143 @@
+<html>
 
+<div class="wrapper">
+    <div class="header">
+        <div class="header-greeting">
+            <h1>Greetings!</h1>
+        </div>
+        <div class="header-wrapper">
+            <div class="header-time">
+                <h3 id="current-time">00 : 00 : 00</h3>
+            </div>
+            <div class="header-date">
+                <h3 id="date">01 / 01 / 16</h3>
+            </div>
+        </div>
+        <div class="header-input"><input type="text" placeholder="Search..." id="search" /><button href="#">></button></div>
+    </div>
+    <div class="links">
+        <div class="menu-block">
+            <ul>reddit
+                <li><a href="http://reddit.com/r/Netrunner">/r/netrunner</a></li>
+                <li><a href="http://reddit.com/r/unixporn">/r/unixporn</a></li>
+                <li><a href="http://reddit.com/r/startpages">/r/startpages</a></li>
+                <li><a href="http://reddit.com/r/bindingofisaac">/r/bindingofisaac</a></li>
+                <li><a href="http://reddit.com/r/linuxmasterrace">/r/linuxmasterrace</a></li>
+                <li><a href="http://reddit.com/r/linux_gaming">/r/linux_gaming</a></li>
+                <li><a href="http://reddit.com/r/fl_studio">/r/fl_studio</a></li>
+            </ul>
+        </div>
+        <div class="menu-block">
+            <ul>social media
+                <li><a href="http://fb.com">facebook</a></li>
+                <li><a href="https://twitter.com">twitter</a></li>
+                <li><a href="https://youtube.com">youtube</a></li>
+                <li><a href="https://soundcloud.com">soundcloud</a></li>
+            </ul>
+        </div>
+        <div class="menu-block">
+            <ul>forums
+                <li><a href="http://discoverygc.com/forums/index.php">discoverygc.com</a></li>
+                <li><a href="http://duelmasters.com.pl">duelmasters.com.pl</a></li>
+                <li><a href="http://letsplej.pl">letsplej.pl</a></li>
+            </ul>
+        </div>
+        <div class="menu-block">
+            <ul>4chan
+                <li><a href="http://4chan.org/pol">/pol</a></li>
+                <li><a href="http://4chan.org/b">/b</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+  <style>
+  @import 'https://fonts.googleapis.com/css?family=Inconsolata';
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: baseline;
+  flex-direction: column;
+  padding-top: 25vh;
+}
+.header {
+  font-family: "Inconsolata", "Roboto Mono", "Consolas", "Courier New", monospace;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.header h1 {
+  margin: 0;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.header-input {
+  width: 100%;
+  display: flex;
+}
+.header-input #search {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 10px;
+  flex: 9;
+  border: 0;
+  background: #eee;
+}
+.header-input button {
+  color: #fff;
+  background: #000;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  flex: 1;
+}
+.links {
+  font-family: "Inconsolata", "Roboto Mono", "Consolas", "Courier New", monospace;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.links .menu-block {
+  display: flex;
+  cursor: pointer;
+  width: 50%;
+}
+.links ul {
+  list-style: none;
+}
+.links ul li {
+  display: none;
+}
+.links ul li a {
+  color: #555;
+}
+div.night {
+  color: #aaa;
+  background: #111;
+}
+input.night {
+  color: #aaa;
+  background-color: #333 !important;
+}
+button.night {
+  background-color: #aaa;
+  color: #333;
+}
+
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<html>
