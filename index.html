@@ -53,7 +53,7 @@
 
     .header-input #search #searchgoogle {
       box-sizing: border-box;
-      height: 32px;
+      height: 200px;
       padding: 0 10px;
       flex: 9;
       border: 0;
@@ -199,10 +199,6 @@ input.select();
 
 let button = document.querySelector(".header-input > button")
 
-button.addEventListener("click", search)
-document.addEventListener("keydown", function(e) {
-  if(e.keyCode === 13) search()
-})
 
 function updateTime() {
   let now = new Date()
