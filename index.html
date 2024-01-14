@@ -133,10 +133,11 @@
         <input type="text" placeholder="Search..." id="search" />
         <button href="#">></button>
       </div>
-       <div class="header-input">
-        <input type="text" placeholder="Search..." id="searchgoogle" />
-        <button href="#">></button>
-      </div>
+    <div class="header-input">
+    <input type="text" placeholder="Search..." id="searchgoogle" />
+    <button onclick="searchGoogle()">Google</button>
+</div>
+
     </div>
     <div class="links">
       <div class="menu-block">
@@ -243,13 +244,11 @@ function search() {
   
   location.href = output
 }
-      function searchgoogle() {
-  let str = document.getElementById("search").value
-  
-  let output = "https://www.google.com/search?q="+str
-  
-  location.href = output
-}
+   function searchGoogle() {
+        let str = document.getElementById("searchgoogle").value;
+        let output = "https://www.google.com/search?q=" + encodeURIComponent(str);
+        window.open(output, "_blank");
+    }
 
 function updateText() {
   let now = new Date()
