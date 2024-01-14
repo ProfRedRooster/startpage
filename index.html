@@ -130,12 +130,12 @@
         </div>
       </div>
       <div class="header-input">
-        <input type="text" placeholder="Search... search.rohandg.nl" id="search" />
-        <button href="#">>search.rohandg.nl</button>
+        <input type="text" placeholder="Search..." id="search" />
+        <button href="#">></button>
       </div>
-        <div class="header-input">
-        <input type="text" placeholder="Search google..." id="searchgoogle" />
-        <button href="#">>search.rohandg.nl</button>
+       <div class="header-input">
+        <input type="text" placeholder="Search..." id="searchgoogle" />
+        <button href="#">></button>
       </div>
     </div>
     <div class="links">
@@ -192,7 +192,6 @@ updateColors()
 setInterval(updateTime, 1000)
 
 var input = document.getElementById('search');
-      var inputgoogle = document.getElementById('searchgoogle');
 input.focus();
 input.select();
 
@@ -245,7 +244,7 @@ function search() {
   location.href = output
 }
       function searchgoogle() {
-  let str = document.getElementById("searchgoogle").value
+  let str = document.getElementById("search").value
   
   let output = "https://www.google.com/search?q="+str
   
