@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -49,11 +48,12 @@
     .header-input {
       width: 100%;
       display: flex;
+      align-items: center; /* Align items vertically in the input container */
     }
 
-    .header-input #search #searchgoogle {
+    .header-input input {
       box-sizing: border-box;
-      height: 200px;
+      height: 32px;
       padding: 0 10px;
       flex: 9;
       border: 0;
@@ -64,9 +64,10 @@
       color: #fff;
       background: #000;
       height: 32px;
-      padding: 0;
+      padding: 0 10px; /* Adjust padding to make the button smaller */
       border: 0;
       flex: 1;
+      cursor: pointer; /* Add cursor pointer for better usability */
     }
 
     .links {
@@ -110,9 +111,9 @@
       color: #333;
     }
     body {
-  margin: 0;
-  overflow: hidden;
-}
+      margin: 0;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -129,15 +130,15 @@
           <h3 id="date">01 / 01 / 16</h3>
         </div>
       </div>
-<div class="header-input">
-    <input type="text" placeholder="Search... search.rohandg.nl" id="search" onkeydown="if(event.keyCode === 13) search()" />
-    <button href="#">></button>
-</div>
-<div class="header-input">
-    <input type="text" placeholder="Search... google.com" id="searchgoogle" onkeydown="if(event.keyCode === 13) searchGoogle()" />
-    <button onclick="searchGoogle()">Google</button>
-</div>
-
+      <div class="header-input">
+        <input type="text" placeholder="Search... search.rohandg.nl" id="search" onkeydown="if(event.keyCode === 13) search()" />
+        <button href="#" onclick="search()">></button>
+      </div>
+      <div class="header-input">
+        <input type="text" placeholder="Search... google.com" id="searchgoogle" onkeydown="if(event.keyCode === 13) searchGoogle()" />
+        <button onclick="searchGoogle()">Google</button>
+      </div>
+    </div>
 
     </div>
     <div class="links">
