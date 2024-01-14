@@ -133,6 +133,10 @@
         <input type="text" placeholder="Search..." id="search" />
         <button href="#">></button>
       </div>
+       <div class="header-input">
+        <input type="text" placeholder="Search..." id="searchgoogle" />
+        <button href="#">></button>
+      </div>
     </div>
     <div class="links">
       <div class="menu-block">
@@ -236,6 +240,13 @@ function search() {
   let str = document.getElementById("search").value
   
   let output = "https://search.rohandg.nl/search.php?term="+str
+  
+  location.href = output
+}
+      function searchgoogle() {
+  let str = document.getElementById("search").value
+  
+  let output = "https://www.google.com/search?q="+str
   
   location.href = output
 }
