@@ -129,14 +129,15 @@
           <h3 id="date">01 / 01 / 16</h3>
         </div>
       </div>
-      <div class="header-input">
-        <input type="text" placeholder="Search..." id="search" />
-        <button href="#">></button>
-      </div>
-    <div class="header-input">
-    <input type="text" placeholder="Search..." id="searchgoogle" />
+<div class="header-input">
+    <input type="text" placeholder="Search... search.rohandg.nl" id="search" onkeydown="if(event.keyCode === 13) search()" />
+    <button href="#">></button>
+</div>
+<div class="header-input">
+    <input type="text" placeholder="Search... google.com" id="searchgoogle" onkeydown="if(event.keyCode === 13) searchGoogle()" />
     <button onclick="searchGoogle()">Google</button>
 </div>
+
 
     </div>
     <div class="links">
