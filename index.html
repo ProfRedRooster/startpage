@@ -247,7 +247,8 @@ function search() {
    function searchGoogle() {
         let str = document.getElementById("searchgoogle").value;
         let output = "https://www.google.com/search?q=" + encodeURIComponent(str);
-        window.open(output, "_blank");
+       
+  location.href = output
     }
 
 function updateText() {
